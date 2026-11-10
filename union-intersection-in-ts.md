@@ -13,12 +13,12 @@ An Intersection type represents AND meaning an object must satisty all the combi
 ```typescript
 type Admin = {
     role: "admin";
-    permissions?: string[]; 
+    permissions: string[]; 
 }
  
 type Customer = {
     role: "customer";
-    purchaseHistory?: string[];
+    purchaseHistory: string[];
 }
 
 type Profile = {
