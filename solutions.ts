@@ -17,9 +17,12 @@ function processInput(value: string | number | boolean) : string | number | unde
 
 
 
+
 function formatCoordinate([latitude, longitude, locationName]: [number, number, string]){
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
+ 
+
 
 
 
@@ -34,12 +37,13 @@ function concatenateArrays <T>(...arrays: T[][]) : T[]{
 
 
 
+
+
 interface Course{
     title: string,
     students: number,
     isPublished: boolean
 }
-
 
 function getPopularCourses (courses: Course[], minStudents: number){
     let popularCourses : Course[] = [];
@@ -55,6 +59,8 @@ function getPopularCourses (courses: Course[], minStudents: number){
 
 
 
+
+
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][]{
     const resultArr: T[K][] = [];
     for(const item of items){
@@ -62,6 +68,10 @@ function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][]{
     }
     return resultArr;    
 }
+
+
+
+
 
 class Employee{
     protected name: string;
@@ -86,6 +96,9 @@ class Manager extends Employee{
     }
 }
  
+
+
+
 
 function validateAgeAsync(age: number): Promise<string> {
     return new Promise<string>((resolve, reject): void => {
